@@ -10,9 +10,9 @@ title: "Devesh Kumar Chaurasia"
 name: &name "Devesh Kumar Chaurasia"
 description: &description "Research in International Trade, Development, and Macroeconomics with a focus on firm networks and global shocks"
 
-url: "https://devesh.github.io"   # ⚠️ change this
-baseurl: ""
-repository: "cdevesh97/devesh.github.io"
+url: "https://cdevesh97.github.io"
+baseurl: "/cdevesh97"
+repository: "cdevesh97/cdevesh97"
 
 # # Basic Site Settings
 # locale                   : "en-US"
@@ -36,7 +36,7 @@ author:
   location         : "India"
   employer         : "Indian School of Business"
   email            : "cdeveshkumar@gmail.com"
-  url              : "https://devesh.github.io"
+  url              : "https://cdevesh97.github.io"
 
 # author:
 #   # Biographic information
