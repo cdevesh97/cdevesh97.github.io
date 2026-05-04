@@ -11,7 +11,7 @@ name: &name "Devesh Kumar Chaurasia"
 description: &description "Research in International Trade, Development, and Macroeconomics with a focus on firm networks and global shocks"
 
 url: "https://cdevesh97.github.io"
-baseurl: ""
+baseurl: "/cdevesh97"
 repository: "cdevesh97/cdevesh97"
 
 # # Basic Site Settings
