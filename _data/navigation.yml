@@ -4,15 +4,15 @@
 # delete the underlying files in _pages / the collection directories too.
 
 main:
+  - title: "Home"
+    url: /
   - title: "Research"
     url: /research/
   - title: "CV"
     url: /cv/
 
 # Add back when there is content:
-#  - title: "Talks"
-#    url: /talks/
 #  - title: "Teaching"
 #    url: /teaching/
-#  - title: "Blog Posts"
-#    url: /year-archive/
+#  - title: "Talks"
+#    url: /talks/

@@ -1,8 +1,9 @@
 /* ==========================================================================
    CUSTOM DESIGN LAYER — minimal single-column
    --------------------------------------------------------------------------
-   Modelled on the plain, full-width academic layout: centred column, photo at
-   the top, top navigation, sans-serif, generous whitespace, almost no colour.
+   Plain academic layout: single centred column, photo left of the intro text,
+   centred top navigation, sans-serif, almost no colour. Vertical rhythm is
+   kept tight so each page fits a typical viewport without scrolling.
 
    Additive only. No theme file is modified, so this layer can be removed by
    deleting the `"custom"` import at the end of assets/css/main.scss.
@@ -13,7 +14,7 @@ $ui-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue
           Arial, "Noto Sans", sans-serif;
 
 /* Width of the centred content column. */
-$column: 47em;
+$column: 52em;
 
 /* --------------------------------------------------------------------------
    Palette — near-monochrome
@@ -73,33 +74,53 @@ body { font-family: $ui-sans; -webkit-font-smoothing: antialiased; }
   float: none;
 }
 
-.page__inner-wrap { margin-top: 1.5em; }
+.page__inner-wrap { margin-top: 1.1em; }
 
 .page__content {
   font-family: $ui-sans;
-  font-size: 1.02em;
-  line-height: 1.72;
+  font-size: 0.97em;
+  line-height: 1.6;
 
-  p { margin: 0 0 1.3em; }
-  li { margin-bottom: 0.45em; }
+  p { margin: 0 0 0.95em; }
+  li { margin-bottom: 0.3em; }
   ul, ol { padding-left: 1.3em; }
 }
 
 /* --------------------------------------------------------------------------
-   Centred photo at the top of the homepage
+   Homepage intro — photo left, text right
    -------------------------------------------------------------------------- */
 
-.lead-photo {
-  text-align: center;
-  margin: 0.5em 0 2em;
+.intro {
+  display: flex;
+  align-items: flex-start;
+  gap: 2.2em;
+  margin-top: 0.5em;
+}
+
+.intro__photo {
+  flex: 0 0 auto;
 
   img {
-    width: 210px;
-    height: 210px;
+    display: block;
+    width: 200px;
+    height: 200px;
     object-fit: cover;
-    border-radius: 50%;
+    border-radius: 3px;
     border: 1px solid var(--rule);
   }
+}
+
+.intro__body {
+  flex: 1 1 auto;
+  min-width: 0;
+
+  > h2:first-child { margin-top: 0; }
+}
+
+@media (max-width: 40em) {
+  .intro { display: block; }
+  .intro__photo { margin-bottom: 1.4em; }
+  .intro__photo img { width: 160px; height: 160px; }
 }
 
 /* --------------------------------------------------------------------------
@@ -117,13 +138,13 @@ body { font-family: $ui-sans; -webkit-font-smoothing: antialiased; }
   h1, h2 {
     font-size: 1.4em;
     font-weight: 600;
-    margin: 2.4em 0 0.8em;
+    margin: 1.7em 0 0.55em;
   }
 
   h3 {
     font-size: 1.1em;
     font-weight: 600;
-    margin: 2em 0 0.45em;
+    margin: 1.3em 0 0.35em;
   }
 
   h4 {
@@ -150,7 +171,7 @@ body { font-family: $ui-sans; -webkit-font-smoothing: antialiased; }
   font-weight: 600;
   text-align: center;
   border-bottom: 0;
-  margin: 0.4em 0 1.4em;
+  margin: 0.3em 0 1em;
 }
 
 .page__lead, .archive__subtitle {
@@ -187,7 +208,7 @@ html[data-theme="dark"] .page__content a { border-bottom-color: rgba(127, 178, 2
   &__inner-wrap {
     max-width: $column;
     margin: 0 auto;
-    padding: 1.4em 1.25em 0.5em;
+    padding: 1.1em 1.25em 0.4em;
     display: block;
     text-align: center;
   }
@@ -235,7 +256,7 @@ html[data-theme="dark"] .page__content a { border-bottom-color: rgba(127, 178, 2
    -------------------------------------------------------------------------- */
 
 .social-row {
-  margin-top: 1.6em;
+  margin-top: 1.2em;
 
   a {
     display: inline-flex;
@@ -267,7 +288,7 @@ html[data-theme="dark"] .social-row a { background: #2f2f2f; }
   border-top: 1px solid var(--rule);
   background: var(--global-footer-bg-color);
   color: var(--muted);
-  margin-top: 4em;
+  margin-top: 2.6em;
 
   footer {
     max-width: $column;
@@ -300,12 +321,12 @@ table { font-family: $ui-sans; font-size: 0.94em; }
 /* Narrow screens: the column padding is enough, drop the extra gutters. */
 @media (max-width: 37.5em) {
   #main { padding-left: 1em; padding-right: 1em; }
-  .lead-photo img { width: 170px; height: 170px; }
+  .intro__photo img { width: 150px; height: 150px; }
 }
 
 /* Print: the CV page is the one people actually print. */
 @media print {
-  .masthead, .page__footer, .social-row, .lead-photo { display: none !important; }
+  .masthead, .page__footer, .social-row, .intro__photo { display: none !important; }
   #main { max-width: none; }
   .page__content { font-size: 11pt; }
   .page__content a { border-bottom: 0; color: #000; }
