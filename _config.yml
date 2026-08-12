@@ -34,7 +34,7 @@ author:
   avatar           : "profile.png"
   name             : "Devesh Kumar Chaurasia"
   bio              : "Research Associate at ISB. Trade, development, and macroeconomics — how firms and supply chains adjust to shocks."
-  location         : "Hyderabad, India"
+  location         : "Mohali, India"
   employer         : "Indian School of Business"
   email            : "cdeveshkumar@gmail.com"
   url              : "https://cdevesh97.github.io"
@@ -53,7 +53,7 @@ author:
   # Academic websites
   academia         : # URL
   arxiv            : # URL - Update with the correct link to your profile
-  googlescholar    : "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
+  googlescholar    : # URL
   inspire-hep      : # URL
   impactstory      : # URL
   orcid            : # URL
