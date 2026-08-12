@@ -7,15 +7,17 @@ author_profile: false
 
 {% include base_path %}
 
-## Work in Progress
+## Research Assistance
+
+Ongoing projects I contribute to as a Research Associate at the Indian School of Business.
 
 **Global Shocks and the Localization of Supply Chains** <br>
-*with Shekhar Tomar, Kanika Mahajan and Anindya Chakraborty*
+*Research Associate to Prof. Shekhar Tomar, Prof. Kanika Mahajan and Prof. Anindya Chakraborty*
 
 How Indian supply chains restructured after the Russia–Ukraine war, using E-Way Bill transaction data.
 
 **Multi-Plant Firms and Regional Business Cycle Co-movement** <br>
-*with Shekhar Tomar, Kanika Mahajan and Anindya Chakraborty*
+*Research Associate to Prof. Shekhar Tomar, Prof. Kanika Mahajan and Prof. Anindya Chakraborty*
 
 How multi-plant firms transmit shocks across regions, using plant-level data on 114,000 firms.
 
