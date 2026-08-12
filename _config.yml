@@ -12,7 +12,7 @@ description: &description "Research in International Trade, Development, and Mac
 
 url: "https://cdevesh97.github.io"
 baseurl: ""
-repository: "cdevesh97/cdevesh97"
+repository: "cdevesh97/cdevesh97.github.io"
 
 # # Basic Site Settings
 # locale                   : "en-US"
@@ -30,10 +30,10 @@ repository: "cdevesh97/cdevesh97"
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
-  avatar           : "profile.jpg"   # upload your photo
+  avatar           : "profile.png"
   name             : "Devesh Kumar Chaurasia"
-  bio              : "Research Associate at ISB. Interested in International Trade, Development, and Macroeconomics."
-  location         : "India"
+  bio              : "Research Associate at ISB. Trade, development, and macroeconomics — how firms and supply chains adjust to shocks."
+  location         : "Hyderabad, India"
   employer         : "Indian School of Business"
   email            : "cdeveshkumar@gmail.com"
   url              : "https://cdevesh97.github.io"
@@ -55,10 +55,10 @@ author:
   googlescholar    : "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
   inspire-hep      : # URL
   impactstory      : # URL
-  orcid            : "https://orcid.org/yourorcidurl"
+  orcid            : # URL
   semantic         : # URL
   ssrn             : # URL
-  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
+  pubmed           : # URL
   researchgate     : # URL
   scopus           : # URL
   zotero           : # URL
@@ -68,13 +68,13 @@ author:
   bitbucket        : # Username - Update with your username on the site
   codepen          : # Username
   dribbble         : # Username
-  github           : "academicpages"
+  github           : "cdevesh97"
   kaggle           : # Username  
   stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
 
   # Social media
   artstation       : # Username
-  bluesky          : "bsky.app" # Replace this with you Bluesky username
+  bluesky          : # Username
   facebook         : # Username
   flickr           : # Username
   foursquare       : # Username
