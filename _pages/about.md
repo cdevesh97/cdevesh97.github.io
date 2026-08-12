@@ -21,4 +21,4 @@ I am applying to PhD programmes in economics for YYYY entry.
 ## Contact
 
 [cdeveshkumar@gmail.com](mailto:cdeveshkumar@gmail.com) <br>
-Indian School of Business, Hyderabad, India
+Indian School of Business, Mohali, India
