@@ -11,8 +11,7 @@ redirect_from:
 
 [Download as PDF](/files/Devesh_CV.pdf)
 
-Education
-======
+## Education
 * **Indira Gandhi Institute of Development Research, Mumbai** — M.Sc. Economics, 2019–21 <br>
   Majors in Econometrics and Macroeconomics. GPA 3.28/4.0 (First Division).
 * **University of Delhi, Hansraj College** — B.A. Economics (Major), 2015–18 <br>
@@ -25,8 +24,7 @@ Economics (Real Analysis and Optimization), Linear Algebra (PhD level), Probabil
 and Statistics, Econometrics, Time Series, Applied Econometrics (PhD level), Applied
 International Trade.
 
-Research experience
-======
+## Research experience
 **Research Associate, Indian School of Business** — Oct 2024 to present <br>
 *with Prof. Shekhar Tomar (ISB), Prof. Kanika Mahajan (Ashoka University), and Prof. Anindya Chakraborty (IIM Ahmedabad)*
 
@@ -52,8 +50,7 @@ Research experience
   effect of democracy on trade reforms using IV and difference-in-differences; explored
   alternative democracy measures including the Freedom House index.
 
-Professional experience
-======
+## Professional experience
 **American Express** — Assistant Manager, Payments Analytics, Jun 2022 – Oct 2024
 
 * Developed and optimised transaction-monitoring rules for over seven million accounts using
@@ -81,20 +78,17 @@ Professional experience
   Agricultural Surveys, and analysed women's labour force participation using multinomial
   logit models on PLFS data.
 
-Conferences and seminars
-======
+## Conferences and seminars
 * 20th Annual Conference on Economic Growth and Development, ISI New Delhi — Dec 2025
 * ISB Summer Research Conference — Aug 2025
 * CAFRAL–ISB Joint Conference: Impact of Monetary and Regulatory Shocks — Mar 2025
 
-Honours and awards
-======
+## Honours and awards
 * All India Rank 64, GATE (Economics), 2021
 * Shri Govind Ram Sharma Memorial Prize, Department Rank 1, Hansraj College
 * First Division, M.Sc. Economics, IGIDR
 
-Technical skills
-======
+## Technical skills
 * **Programming:** Python, R, Stata, SQL, LaTeX, Bash
 * **Methods:** Difference-in-differences, instrumental variables, event studies, Poisson QMLE,
   panel data, time series, machine learning (random forests, XGBoost, LightGBM)

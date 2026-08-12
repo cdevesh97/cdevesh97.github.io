@@ -1,0 +1,312 @@
+/* ==========================================================================
+   CUSTOM DESIGN LAYER — "refined academic"
+   --------------------------------------------------------------------------
+   Additive overrides only. No theme file is modified, so this whole layer can
+   be removed by deleting the `"custom"` import at the end of
+   assets/css/main.scss. Colours are set through the theme's own CSS custom
+   properties so light and dark modes stay in step.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Type stacks — system fonts only, so there are no external font requests.
+   -------------------------------------------------------------------------- */
+
+$reading-serif: Charter, "Bitstream Charter", "Sitka Text", Cambria, Georgia, "Times New Roman", serif;
+$ui-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+/* Comfortable line length for body copy. */
+$measure: 40em;
+
+/* --------------------------------------------------------------------------
+   Palette
+   -------------------------------------------------------------------------- */
+
+:root {
+  --accent            : #1b3a5c;   /* deep navy */
+  --accent-strong     : #12283f;
+  --rule              : #e4e6ea;   /* hairline */
+  --muted             : #5d6470;
+
+  --global-bg-color         : #fefefe;
+  --global-text-color       : #23272e;
+  --global-link-color       : #234e75;
+  --global-link-color-hover : #12283f;
+  --global-link-color-visited: #234e75;
+  --global-border-color     : #e4e6ea;
+  --global-footer-bg-color  : #fbfbfa;
+  --global-masthead-link-color: #23272e;
+  --global-masthead-link-color-hover: #1b3a5c;
+}
+
+html[data-theme="dark"] {
+  --accent            : #8fb4d9;
+  --accent-strong     : #b9d2ea;
+  --rule              : #2b313a;
+  --muted             : #99a1ad;
+
+  --global-bg-color         : #15181d;
+  --global-text-color       : #dbdfe6;
+  --global-link-color       : #8fb4d9;
+  --global-link-color-hover : #b9d2ea;
+  --global-link-color-visited: #8fb4d9;
+  --global-border-color     : #2b313a;
+  --global-footer-bg-color  : #12151a;
+  --global-masthead-link-color: #dbdfe6;
+  --global-masthead-link-color-hover: #8fb4d9;
+}
+
+/* --------------------------------------------------------------------------
+   Base typography
+   -------------------------------------------------------------------------- */
+
+body {
+  font-family: $reading-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.page__content {
+  font-family: $reading-serif;
+  font-size: 1.075em;
+  line-height: 1.68;
+
+  p, ul, ol, blockquote {
+    max-width: $measure;
+  }
+
+  p { margin: 0 0 1.25em; }
+
+  li { margin-bottom: 0.4em; }
+
+  /* Slightly tighter nesting than the theme default. */
+  ul, ol { padding-left: 1.35em; }
+}
+
+/* --------------------------------------------------------------------------
+   Headings — serif, tighter leading, hairline rules for section breaks
+   -------------------------------------------------------------------------- */
+
+.page__content {
+  h1, h2, h3, h4, h5, h6 {
+    font-family: $reading-serif;
+    font-weight: 600;
+    line-height: 1.25;
+    letter-spacing: -0.005em;
+    color: var(--global-text-color);
+  }
+
+  /* Section headings: "Research", "Education", "Current projects" … */
+  h1, h2 {
+    font-size: 1.5em;
+    margin: 2.2em 0 0.85em;
+    padding-bottom: 0.3em;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  /* Sub-headings: individual projects and papers. */
+  h3 {
+    font-size: 1.18em;
+    margin: 1.9em 0 0.5em;
+    color: var(--accent);
+  }
+
+  h4 {
+    font-size: 1.02em;
+    margin: 1.5em 0 0.4em;
+    font-style: italic;
+    font-weight: 500;
+  }
+
+  /* First heading on a page should not push the content far down. */
+  > h1:first-child, > h2:first-child { margin-top: 0.6em; }
+
+  /* Italic line directly under a heading = venue / affiliation line. */
+  h3 + p em:only-child,
+  h2 + p em:only-child {
+    color: var(--muted);
+    font-style: normal;
+    font-size: 0.92em;
+  }
+}
+
+/* The big page title above the content (Research, CV). */
+.page__title {
+  font-family: $reading-serif;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  border-bottom: 0;
+  margin-bottom: 0.15em;
+}
+
+.page__lead, .archive__subtitle {
+  font-family: $reading-serif;
+  color: var(--muted);
+  border-bottom: 1px solid var(--rule);
+}
+
+/* --------------------------------------------------------------------------
+   Links — restrained underline, no colour shift on visit
+   -------------------------------------------------------------------------- */
+
+.page__content a {
+  color: var(--global-link-color);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.15em;
+  text-decoration-color: rgba(35, 78, 117, 0.35);
+  transition: color 0.15s ease, text-decoration-color 0.15s ease;
+
+  &:hover {
+    color: var(--global-link-color-hover);
+    text-decoration-color: currentColor;
+  }
+}
+
+html[data-theme="dark"] .page__content a {
+  text-decoration-color: rgba(143, 180, 217, 0.4);
+}
+
+/* Headings should not inherit link underlines. */
+.page__content h1 a, .page__content h2 a, .page__content h3 a {
+  text-decoration: none;
+}
+
+/* --------------------------------------------------------------------------
+   Masthead — lighter, hairline separator
+   -------------------------------------------------------------------------- */
+
+.masthead {
+  border-bottom: 1px solid var(--rule);
+  background-color: var(--global-bg-color);
+
+  .site-title {
+    font-family: $reading-serif;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+
+  .site-subtitle { font-family: $ui-sans; }
+}
+
+.greedy-nav {
+  background: transparent;
+
+  a {
+    font-family: $ui-sans;
+    font-size: 0.86em;
+    letter-spacing: 0.01em;
+  }
+
+  /* Replace the theme's thick sliding underline with a hairline. */
+  .visible-links a:before { height: 2px; background: var(--accent); }
+}
+
+/* --------------------------------------------------------------------------
+   Author sidebar
+   -------------------------------------------------------------------------- */
+
+.sidebar {
+  font-family: $ui-sans;
+
+  /* Quieter than the theme default, which competes with the content. */
+  .author__name {
+    font-family: $reading-serif;
+    font-size: 1.22em;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin-bottom: 0.15em;
+  }
+
+  .author__bio {
+    font-family: $ui-sans;
+    font-size: 0.86em;
+    line-height: 1.5;
+    color: var(--muted);
+    margin-bottom: 1em;
+  }
+
+  .author__urls-wrapper button { font-family: $ui-sans; }
+}
+
+.author__avatar img {
+  border-radius: 3px;              /* near-square reads more formal than a circle */
+  border: 1px solid var(--rule);
+  padding: 0;
+  box-shadow: none;
+  max-width: 175px;
+}
+
+.author__urls {
+  font-family: $ui-sans;
+  font-size: 0.86em;
+  border-color: var(--rule);
+  box-shadow: none;
+
+  li { padding: 0.22em 0; }
+
+  a {
+    text-decoration: none;
+    color: var(--global-text-color);
+
+    &:hover {
+      color: var(--accent);
+      text-decoration: underline;
+      text-underline-offset: 0.15em;
+    }
+  }
+
+  .fa, .fas, .far, .fab, .ai {
+    color: var(--muted);
+    margin-right: 0.35em;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Footer — quiet
+   -------------------------------------------------------------------------- */
+
+.page__footer {
+  font-family: $ui-sans;
+  font-size: 0.8em;
+  border-top: 1px solid var(--rule);
+  background-color: var(--global-footer-bg-color);
+
+  footer { padding-top: 1.5em; padding-bottom: 1.5em; }
+
+  a { color: var(--muted); text-decoration: none; }
+  a:hover { color: var(--accent); text-decoration: underline; }
+}
+
+.page__footer-follow .social-icons a { color: var(--muted); }
+
+/* --------------------------------------------------------------------------
+   Misc polish
+   -------------------------------------------------------------------------- */
+
+/* The theme adds a rule under the content block; the hairline headings
+   already separate sections, so drop the extra weight. */
+.page__meta, .page__date { font-family: $ui-sans; color: var(--muted); }
+
+blockquote {
+  border-left: 2px solid var(--accent);
+  font-style: normal;
+  color: var(--muted);
+}
+
+hr { border: 0; border-top: 1px solid var(--rule); margin: 2.5em 0; }
+
+/* Tables inherit the serif so CV-style content stays consistent. */
+table { font-family: $reading-serif; font-size: 0.95em; }
+th { border-bottom: 1px solid var(--global-dark-border-color); }
+
+/* Wide content should scroll inside its own box rather than the page. */
+.page__content { overflow-wrap: break-word; }
+.page__content table { display: block; overflow-x: auto; max-width: 100%; }
+
+/* Print: the CV page is the one people will actually print. */
+@media print {
+  .sidebar, .masthead, .page__footer, .author__urls-wrapper { display: none !important; }
+  .page__content { font-size: 11pt; }
+  .page__content a { text-decoration: none; color: #000; }
+}
