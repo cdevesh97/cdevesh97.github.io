@@ -1,10 +1,14 @@
 ---
 permalink: /
-author_profile: true
+author_profile: false
 redirect_from: 
   - /about/
   - /about.html
 ---
+
+<p class="lead-photo"><img src="/images/profile.png" alt="Devesh Kumar Chaurasia"></p>
+
+## Welcome
 
 I am a Research Associate at the [Indian School of Business](https://www.isb.edu/), working with Prof. Shekhar Tomar (ISB), Prof. Kanika Mahajan (Ashoka University), and Prof. Anindya Chakraborty (IIM Ahmedabad).
 
@@ -22,3 +26,9 @@ I am applying to PhD programmes in economics for YYYY entry.
 
 [cdeveshkumar@gmail.com](mailto:cdeveshkumar@gmail.com) <br>
 Indian School of Business, Mohali, India
+
+<p class="social-row">
+  <a href="mailto:cdeveshkumar@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+  <a href="https://github.com/cdevesh97" aria-label="GitHub"><i class="fab fa-github"></i></a>
+  <a href="https://www.linkedin.com/in/deveshkchaurasia/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+</p>
