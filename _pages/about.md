@@ -1,6 +1,5 @@
 ---
 permalink: /
-title: "Devesh Kumar Chaurasia"
 author_profile: true
 redirect_from: 
   - /about/
